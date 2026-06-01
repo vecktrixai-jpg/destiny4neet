@@ -4,8 +4,8 @@ import { db } from "@/server/db";
 import { Msg91Service } from "@/server/msg91";
 
 // Hardcoded notification target
-const NOTIFY_EMAIL = "talhaansari1606@gmail.com";
-const TEMPLATE_ID = "scholar_bot_lead_notification"; // Replace with actual Msg91 template ID
+const NOTIFY_EMAIL = "vecktrixai@gmail.com";
+const TEMPLATE_ID = "scholar_bot_lead_notification_2";
 
 const leadSchema = z.object({
   name: z.string().min(1, "Name is required").max(100),

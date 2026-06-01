@@ -4,13 +4,13 @@ export function TestimonialSection() {
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-900/20 rounded-full blur-[100px] pointer-events-none" />
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-black aspect-video group border border-slate-800">
-            <img alt="Video Testimonial Preview" className="w-full h-full object-cover opacity-70 group-hover:opacity-50 transition-all duration-700 group-hover:scale-105" data-alt="group of medical students in a collaborative learning session with anatomical models and tablets" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAp7nak78aJmWOcGNjWGW-rdRVPqVrNPh-UxHcSzXn7zA3pROvMVTEMzc0iMG1Qt1lu1R6PI9YWzoh-SlofbnIwNzyFcLZj_Yb4GmEfnYaG6VZ4KuDghTGpUB8517o1uLGj_vrxpI8Mo9mYQCwbyKLzgIY8xslsa8aP1pCLRnSL8H8GdIlqtKzEDSB3hmDJwx2zE-xFCc8pC8oXlBilF6Eb2zXujw2RX4G2g5_71V9raT84UcPA61rk14JV9LF16-y3x9Cw3gudhG5b"/>
-            <div className="absolute inset-0 flex items-center justify-center cursor-pointer">
-              <div className="w-20 h-20 bg-blue-600/90 backdrop-blur-md rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(37,99,235,0.4)] transform group-hover:scale-110 group-hover:bg-blue-500 transition-all duration-300">
-                <span className="material-symbols-outlined text-white text-4xl" data-icon="play_arrow" style={{ fontVariationSettings: "'FILL' 1" }}>play_arrow</span>
-              </div>
-            </div>
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-black aspect-video border border-slate-800">
+            <video
+              className="w-full h-full object-cover"
+              src="/landing_video/video.mp4"
+              controls
+              playsInline
+            />
           </div>
           <div>
             <span className="inline-block px-4 py-1.5 mb-4 text-xs font-bold tracking-widest text-blue-400 uppercase bg-blue-900/30 rounded-full border border-blue-800/50">
