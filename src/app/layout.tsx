@@ -17,7 +17,15 @@ const heading = Outfit({
 export const metadata: Metadata = {
   title: 'Destiny 4 NEET | Personal Mentorship for Medical Aspirants',
   description: 'Focused NEET preparation with small batches, personal guidance, mock-test strategy, and student-first mentorship.',
-  icons: [{ rel: 'icon', url: '/icon.svg', type: 'image/svg+xml' }],
+  icons: {
+    icon: [
+      { url: '/favicon_io/favicon.ico' },
+      { url: '/favicon_io/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon_io/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+    ],
+    apple: [{ url: '/favicon_io/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
+  },
+  manifest: '/favicon_io/site.webmanifest',
   openGraph: {
     images: [{ url: '/logo.png' }],
   },
