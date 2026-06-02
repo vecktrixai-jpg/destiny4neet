@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { put } from "@vercel/blob";
+import { revalidatePath } from "next/cache";
 import { db } from "@/server/db";
 import { env } from "@/env";
 
@@ -71,6 +72,9 @@ export async function POST(request: Request) {
         status,
       },
     });
+
+    revalidatePath("/admin/resources");
+    revalidatePath("/resources");
 
     return NextResponse.json(resource);
   } catch (error) {

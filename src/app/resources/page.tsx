@@ -8,6 +8,8 @@ export const metadata: Metadata = {
     "Download free previous year papers, mock tests, and study notes for NEET preparation.",
 };
 
+export const dynamic = "force-dynamic";
+
 // Helper to format file size
 function formatFileSize(bytes: number): string {
   if (bytes < 1024) return `${bytes} B`;

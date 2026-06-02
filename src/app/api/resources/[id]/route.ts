@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { del } from "@vercel/blob";
+import { revalidatePath } from "next/cache";
 import { db } from "@/server/db";
 import { env } from "@/env";
 
@@ -39,6 +40,9 @@ export async function DELETE(
     await db.resource.delete({
       where: { id },
     });
+
+    revalidatePath("/admin/resources");
+    revalidatePath("/resources");
 
     return NextResponse.json({ success: true });
   } catch (error) {
@@ -85,6 +89,9 @@ export async function PATCH(
         ...(status && { status }),
       },
     });
+
+    revalidatePath("/admin/resources");
+    revalidatePath("/resources");
 
     return NextResponse.json({ success: true, resource: updatedResource });
   } catch (error) {

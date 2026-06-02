@@ -3,17 +3,13 @@ import { ResourceUploadForm } from "@/components/admin/ResourceUploadForm";
 import { ResourceTable } from "@/components/admin/ResourceTable";
 import { ResourcePageActions } from "@/components/admin/ResourcePageActions";
 
+export const dynamic = "force-dynamic";
+
 export default async function AdminResourcesPage() {
   // Fetch initial data
   const resources = await db.resource.findMany({
     orderBy: { createdAt: "desc" },
   });
-
-  const totalResources = resources.length;
-  const publishedCount = resources.filter(r => r.status === "Published").length;
-  // This is a rough estimation of storage used out of a hypothetical 10GB limit
-  const totalStorageBytes = resources.reduce((acc, curr) => acc + curr.fileSize, 0);
-  const storagePercentage = Math.min(Math.round((totalStorageBytes / (10 * 1024 * 1024 * 1024)) * 100), 100);
 
   // We convert the dates to ISO strings to pass to client components
   const serializedResources = resources.map(r => ({
