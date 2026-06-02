@@ -1,5 +1,7 @@
 import { db } from "@/server/db";
 
+export const dynamic = "force-dynamic";
+
 export default async function AdminLeadsPage() {
   const leads = await db.chatLead.findMany({
     orderBy: { createdAt: "desc" },

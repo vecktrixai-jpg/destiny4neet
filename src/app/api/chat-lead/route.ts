@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { revalidatePath } from "next/cache";
 import { z } from "zod";
 import { db } from "@/server/db";
 import { Msg91Service } from "@/server/msg91";
@@ -42,6 +43,8 @@ export async function POST(request: Request) {
       create: { name, email, classLevel: normalizedClass, phone, goal },
       update: { name, classLevel: normalizedClass, ...(phone && { phone }), ...(goal && { goal }) },
     });
+
+    revalidatePath("/admin/leads");
 
     // Send notification email (fire-and-forget, don't block the response)
     if (Msg91Service.isConfigured()) {
