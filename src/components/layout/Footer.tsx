@@ -27,12 +27,13 @@ export function Footer() {
           <Link href="/#enquiry" className="inline-block text-white font-bold text-sm hover:text-primary-container transition-colors mb-6">Go to enquiry form</Link>
           <div className="flex flex-col gap-2 text-sm text-slate-400">
             <p><span className="text-white font-medium">Sah Sir (Biology):</span> +91 98103 52371</p>
-            <p><span className="text-white font-medium">Sanjay Sir (Biology):</span> +91 98382 76817</p>
+            <p><span className="text-white font-medium">Sunil Kumar (Botany):</span> +91 99197 45831</p>
+            <p><span className="text-white font-medium">Himanshu Sir (Chemistry):</span> +91 98683 66053</p>
           </div>
         </div>
       </div>
       <div className="mt-16 pt-8 border-t border-white/5 text-center">
-        <p className="text-slate-600 text-[0.7rem]">© 2024 Destiny 4 NEET. Focused preparation for future doctors.</p>
+        <p className="text-slate-600 text-[0.7rem]">© 2026 Destiny 4 NEET. Focused preparation for future doctors.</p>
       </div>
     </footer>
   );

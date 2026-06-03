@@ -17,12 +17,12 @@ export function FacultyGrid() {
       alt: "Mr. Himanshu"
     },
     {
-      name: "Mr. Sanjay Kumar",
-      role: "Biology Expert",
+      name: "Mr. Sunil Kumar",
+      role: "Botany Faculty",
       experience: "20+ Yrs Exp",
       achievements: "Specialist in building a strong foundation in Plant Sciences.",
       image: "/sir/sanjay.jpeg",
-      alt: "Mr. Sanjay Kumar"
+      alt: "Mr. Sunil Kumar"
     },
     {
       name: "Dr. Manohar Sah",
