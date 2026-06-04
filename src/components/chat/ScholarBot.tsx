@@ -64,10 +64,10 @@ export function ScholarBot() {
 
     const closeCount = parseInt(sessionStorage.getItem("scholarbot_close_count") || "0", 10);
 
-    let delay = 5000;
-    if (closeCount === 1) delay = 10000;
-    else if (closeCount === 2) delay = 20000;
-    else if (closeCount >= 3) delay = 30000;
+    let delay = 10000;
+    if (closeCount === 1) delay = 15000;
+    else if (closeCount === 2) delay = 25000;
+    else if (closeCount >= 3) delay = 35000;
 
     const timer = setTimeout(() => {
       setIsOpen(true);
@@ -321,7 +321,7 @@ export function ScholarBot() {
               />
               <div className="flex items-center gap-3 relative z-10">
                 <div>
-                  <p className="font-bold text-sm">Destiny 4 NEET Agent</p>
+                  <p className="font-bold text-lg">Destiny 4 NEET Agent</p>
                   <p className="text-[0.6rem] text-white/80 uppercase tracking-wider flex items-center gap-1">
                     <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
                     Online
@@ -352,9 +352,9 @@ export function ScholarBot() {
                   className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
                 >
                   <div
-                    className={`max-w-[85%] p-3 text-xs leading-relaxed shadow-sm ${
+                    className={`max-w-[85%] p-3.5 text-[0.8rem] font-semibold leading-relaxed shadow-sm ${
                       msg.role === "bot"
-                        ? "bg-white border border-outline-variant rounded-2xl rounded-tl-sm text-on-surface-variant"
+                        ? "bg-white border border-outline-variant rounded-2xl rounded-tl-sm text-on-surface"
                         : "bg-primary text-white rounded-2xl rounded-tr-sm"
                     }`}
                   >

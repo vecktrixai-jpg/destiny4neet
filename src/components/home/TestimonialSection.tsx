@@ -8,6 +8,7 @@ export function TestimonialSection() {
             <video
               className="w-full h-full object-cover"
               src="/landing_video/video.mp4"
+              poster="/landing_video/thumbnail.png"
               controls
               playsInline
             />
